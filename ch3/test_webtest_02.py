@@ -8,6 +8,7 @@ WebTest는 파이썬 앱에 대한 호출을 실제 http애플리케이션에 �
 
 HTTP_SERVER=http://myservice/ 로 환경 변수를 설정하고 테스트를 실행했다면 모든 호출을 http://myservice/로 보낸다.
 이 방법은 두 개의 분리된 테스트를 만들지 않고도 기능테스트를 쉽게 통합테스트로 전환할 수 있게 해준다. 
+
 """
 
 import unittest

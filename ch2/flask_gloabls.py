@@ -26,4 +26,5 @@ def my_microservice():
 
 if __name__ == '__main__':
     app.run()
-    
+
+#클라이언트가 /api 엔드포인트를 호출하면 제공된 헤더 정보에 맞는 g.user 값이 authenticate()함수에서 설정된다.

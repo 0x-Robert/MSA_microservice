@@ -28,8 +28,11 @@ Flask's Authorization header
 @app.route("/")
 def auth():
     print("The raw Authorization header")
+    #Basic + base64 형태 반환
     print(request.environ["HTTP_AUTHORIZATION"])
     print("Flask's Authorization header")
+    #플라스크가 Basic 접두사를 감지해서 request.authorization내의 username과 password를 필드로 파싱함
+    
     print(request.authorization)
     return ""
 
