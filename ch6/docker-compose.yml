@@ -1,0 +1,25 @@
+# Chapter06
+# docker-compose.yml
+# docker compose는 여러개의 컨테이너를 한개 프로젝트에서 올릴 때 사용
+# 예제의 udp 프로토콜은 적용되지 않아서 udp 제외하고 호스트와 컨테이너 포트를 바인딩 시켜서 서비스를 올렸다
+# docker-compose up   : 실행
+# 브라우저에서 localhost:9000으로 접속하면 Graylog를 볼 수 있다. admin/admin (계정)
+version: '2'
+services:
+  some-mongo:
+    image: "mongo:3"
+  some-elasticsearch:
+    image: "elasticsearch:2"
+    command: "elasticsearch -Des.cluster.name='graylog'"
+  graylog:
+    image: graylog2/server:2.1.1-1
+    environment:
+      GRAYLOG_PASSWORD_SECRET: somepasswordpepper
+      GRAYLOG_ROOT_PASSWORD_SHA2: 8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918
+      GRAYLOG_WEB_ENDPOINT_URI: http://127.0.0.1:9000/api
+    links:
+      - some-mongo:mongo
+      - some-elasticsearch:elasticsearch
+    ports:
+      - "9000:9000"
+      - "12201:12201"
