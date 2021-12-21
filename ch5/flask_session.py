@@ -32,6 +32,6 @@ def get_connector(app,name='default'):
 """
 setup_connector()함수는 Session 객체를 생성해 앱의 extensions에 저장한다. 
 생성된 Session의 Content-Type 헤더값은 application/json이 기본으로 지정되므로 JSON기반의 마이크로 서비스에 데이터를 보내는 데 쓸 수 있다.
-
+세션이 앱에 저장되면 뷰에서는 get_connector 함수로 저장된 세션을 가져올 수 있다.
 
 """

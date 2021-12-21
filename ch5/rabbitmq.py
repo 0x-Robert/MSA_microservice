@@ -17,3 +17,7 @@ message('race.34','새로운 대회(race) 정보')
 #training.12 메시지 전송
 message('training.12',"새로운 훈련 계획(training plan) 정보")
 
+'''
+이 rpc 호출은 race와 training 큐에 메시지를 하나씩 추가한다. 
+
+'''
