@@ -1,0 +1,22 @@
+{
+  "name": "dashboard",
+  "homepage": "https://github.com/shypang/MSA_microservice",
+  "authors": [
+    "shypang <smartdragon417@gmail.com>"
+  ],
+  "description": "Runnerly에 사용될 리액트 기반 대시보드",
+  "main": "file",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.6.0",
+    "react": "^16.1.0"
+  }
+}
