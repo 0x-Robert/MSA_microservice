@@ -10,6 +10,8 @@ import requests
 3. 스트라바 워커는 데이터 서비스에 보내는 모든 요청에 토큰을 추가한다. 
 4. 데이터 서비스는 TokenDealer를 호출해 토큰을 검증하거나 로컬에서 직접 토큰을 검증한다.
 
+call_data_service() 함수는 데이터 서비스를 호출했을 때 응답 코드가 401이면 새로운 토큰을 요청한다.
+
 """
 server = 'http://localhost:5000'
 secret = 'f0fdeb1f1584fd5431c4250b2e859457'
