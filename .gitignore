@@ -1,7 +1,2 @@
-*.un~
-lib
-bin
-include
-*.egg-info
-.Python
+
 __pycache__
